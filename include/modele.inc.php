@@ -1,12 +1,12 @@
 <?php
-/** 
- * Classe d'accès aux données. 
- 
+/**
+ * Classe d'accès aux données.
+
  * Utilise les services de la classe PDO
  * pour l'application exempleMVC du cours sur la bdd bddemployés
  * Les attributs sont tous statiques,
  * les 4 premiers pour la connexion
- * $monPdo de type PDO 
+ * $monPdo de type PDO
  * $monPdo qui contiendra l'unique instance de la classe
  * @package default
  * @author AP
@@ -14,10 +14,10 @@
  * @link       http://www.php.net/manual/fr/book.pdo.php
  */
 
-class PdoGsb{   		
+class PdoGsb{
       	private static $serveur='mysql:host=localhost';
-      	private static $bdd='dbname=gsb_visiteurs_g1';   		
-      	private static $user='root' ;    		
+      	private static $bdd='dbname=gsb_visiteurs_g1';
+      	private static $user='root' ;
       	private static $mdp='' ;
         private static $monPdo;
 	private static $monPdoGsb=null;
@@ -25,12 +25,12 @@ class PdoGsb{
 /**
  * Constructeur privé, crée l'instance de PDO qui sera sollicitée
  * pour toutes les méthodes de la classe
- */				
+ */
 	private function __construct(){
         try {
-    	PdoGsb::$monPdo = new PDO(PdoGsb::$serveur.';'.PdoGsb::$bdd, PdoGsb::$user, PdoGsb::$mdp); 
+    	PdoGsb::$monPdo = new PDO(PdoGsb::$serveur.';'.PdoGsb::$bdd, PdoGsb::$user, PdoGsb::$mdp);
 		PdoGsb::$monPdo->query("SET CHARACTER SET utf8");
-	
+
         } catch (Exception $e) {
             throw new Exception("Erreur Ã  la connexion \n" . $e->getMessage());
         }
@@ -41,16 +41,16 @@ class PdoGsb{
 	}
 /**
  * Fonction statique qui crée l'unique instance de la classe PdoExemple
- 
+
  * Appel : $instancePdoExemple = PdoExemple::getPdoExemple();
- 
+
  * @return l'unique objet de la classe PdoExemple
  */
 	public  static function getPdoGsb(){
 		if(PdoGsb::$monPdoGsb==null){
 			PdoGsb::$monPdoGsb= new PdoGsb();
 		}
-		return PdoGsb::$monPdoGsb;  
+		return PdoGsb::$monPdoGsb;
 	}
    public function getInfosVisiteur($login,$mdp){
        // retourne un tableau associatif contenant le visiteur
@@ -69,5 +69,13 @@ class PdoGsb{
         // ou return $this->_pdo->query($query)->fetchAll(PDO::FETCH_ASSOC);
     }
 
-}   
+    public function getConsulterMedicaments()
+     {
+       // retourne un tableau associatif contenant tous les eleves
+      $req="SELECT * FROM `medicament` inner join famille on medicament.FAM_CODE = famille.FAM_CODE";
+      $rs = PdoGsb::$monPdo->query($req);
+      $ligne = $rs->fetchAll(PDO::FETCH_ASSOC);
+      return $ligne;
+    }
+}
   ?>
