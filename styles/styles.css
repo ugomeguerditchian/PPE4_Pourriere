@@ -7,7 +7,7 @@ body{
   padding : 0.6em;
   font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
   font-size:0.8em;
-} 
+}
 #page {
   background-color:white;
   width : 65%;
@@ -50,18 +50,18 @@ body{
 	margin-left: 18%;
 /* permet de fixer une hauteur mini sur les navigateurs modernes */
   min-height:27em;
-/* pour obtenir le même effet sur IE, sachant que si le contenu dépasse, il
+/* pour obtenir le mï¿½me effet sur IE, sachant que si le contenu dï¿½passe, il
 "poussera" la hauteur en ne respectant pas la norme. On se joue de ses lacunes
 */
   height:27em;
 }
 
-/* pour rétablir le mauvais effet sur les nav. modernes */
+/* pour rï¿½tablir le mauvais effet sur les nav. modernes */
 html>body #contenu{
   height:auto;
 }
 
-/* style à appliquer à la balise ul d'identifiant menulist */
+/* style ï¿½ appliquer ï¿½ la balise ul d'identifiant menulist */
 ul#menuList{
     list-style:none;
     margin:0px;
@@ -70,14 +70,14 @@ ul#menuList{
     font-size: 1em;
 }
 
-/* style à appliquer aux éléments de la balise ul d'identifiant menulist */
+/* style ï¿½ appliquer aux ï¿½lï¿½ments de la balise ul d'identifiant menulist */
 ul#menuList li {
     position:relative;
     margin:0px;
     padding:0px;
 }
 
-/* apparences des liens dans listes et sous-listes non numérotées */
+/* apparences des liens dans listes et sous-listes non numï¿½rotï¿½es */
 ul#menuList a {
     color:rgb(0,85,227);
     display:block;
@@ -140,7 +140,7 @@ ul#menuList a:hover {
   margin-top:0em;
 }
 form {
-  margin-bottom:1em;  
+  margin-bottom:1em;
 }
 .corpsForm legend {
   font-weight:bold;
@@ -152,7 +152,7 @@ form {
   width:33%;
 	margin: 0;
 	padding: 0 .5em 0 0;
-	line-height: 1.8;	
+	line-height: 1.8;
 }
 input, button, textarea, select{
   font-family:"Trebuchet MS", sans-serif;
@@ -169,9 +169,9 @@ input:hover, textarea:hover, select:hover{
   cursor : pointer;
 }
 
-/*  Le texte des messages d'erreur est de couleur rose sur fond ocre et de 
-taille de caractères légèrement supérieure à la normale */
-.erreur{ 
+/*  Le texte des messages d'erreur est de couleur rose sur fond ocre et de
+taille de caractï¿½res lï¿½gï¿½rement supï¿½rieure ï¿½ la normale */
+.erreur{
    background-color:rgb(237,210,229);
    color:rgb(203,28,128);
    font-size:1.1em;
@@ -185,7 +185,7 @@ taille de caractères légèrement supérieure à la normale */
    background-color:rgb(178,207,81);
    color : white;
    font-size:1.1em;
-   width : 95%  
+   width : 95%
 }
 
 .encadre {
@@ -225,8 +225,8 @@ taille de caractères légèrement supérieure à la normale */
    border-collapse : collapse;
 }
 
-/* Style pour les lignes d'en-tête des tableaux */
-#contenu th {  
+/* Style pour les lignes d'en-tï¿½te des tableaux */
+#contenu th {
    background-color:#77AADD;
    height:21px;
    text-align:left;
@@ -234,7 +234,7 @@ taille de caractères légèrement supérieure à la normale */
    font-weight:bold;
    border-bottom:0.1em solid #777777;
    font-size:1.1em;
-} 
+}
 
 #contenu td {
    border :1px solid #777777;
@@ -248,7 +248,7 @@ table.listeLegere {
     margin-bottom : 0.5em;
 }
 
-/* Tableaux quadrillés utilisés pour l'affichage de listes avec contenu léger*/ 
+/* Tableaux quadrillï¿½s utilisï¿½s pour l'affichage de listes avec contenu lï¿½ger*/
 table.listeLegere th, table.listeLegere td {
   border : dotted rgb(178,207,81) 0.1em;
   padding:0.5em;

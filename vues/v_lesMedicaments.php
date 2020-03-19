@@ -1,71 +1,77 @@
-<table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+<table id="dtBasicExample" class="table table-bordered table-sm" cellspacing="0" width="100%">
   <thead>
     <tr>
-      <th class="th-sm">Name
-      </th>
-      <th class="th-sm">Position
-      </th>
-      <th class="th-sm">Office
-      </th>
-      <th class="th-sm">Age
-      </th>
-      <th class="th-sm">Start date
-      </th>
-      <th class="th-sm">Salary
-      </th>
+      <th class="th-sm">MED_DEPOTLEGAL</th>
+      <th class="th-sm">MED_NOMCOMMERCIAL</th>
+      <th class="th-sm">FAM_CODE</th>
+      <th class="th-sm">MED_COMPOSITION</th>
+      <th class="th-sm">MED_EFFETS</th>
+      <th class="th-sm">MED_CONTREINDIC</th>
+      <th class="th-sm">MED_PRIXECHANTILLON</th>
+      <th class="th-sm">MED_PRESENTATION</th>
+      <th class="th-sm">FAM_CODE</th>
+      <th class="th-sm">FAM_LIBELLE</th>
     </tr>
   </thead>
   <tbody>
     <?php
     foreach($ConsulterMedicaments as $UnMedicaments)
     {
-      $code = $UnEleve['CODE'];
-      $nom = $UnEleve['NOM'];
-      $date = $UnEleve['DATEINSCRIPTION'];
-      $prenom = $UnEleve['PRENOM'];
-      $adresse = $UnEleve['ADRESSE'];
-      $credithoraire = $UnEleve['CREDITHORAIRE'];
+      $depot = $UnMedicaments['MED_DEPOTLEGAL'];
+      $nom = $UnMedicaments['MED_NOMCOMMERCIAL'];
+      $code = $UnMedicaments['FAM_CODE'];
+      $composition = $UnMedicaments['MED_COMPOSITION'];
+      $effets = $UnMedicaments['MED_EFFETS'];
+      $contredication = $UnMedicaments['MED_CONTREINDIC'];
+      $prixechantillon = $UnMedicaments['MED_PRIXECHANTILLON'];
+      $presentation = $UnMedicaments['MED_PRESENTATION'];
+      $codefamille = $UnMedicaments['FAM_CODE'];
+      $libellefamille = $UnMedicaments['FAM_LIBELLE'];
       ?>
-
-    <tr>
-      <td>Tiger Nixon</td>
-      <td>System Architect</td>
-      <td>Edinburgh</td>
-      <td>61</td>
-      <td>2011/04/25</td>
-      <td>$320,800</td>
-    </tr>
-    <tr>
-      <td>Garrett Winters</td>
-      <td>Accountant</td>
-      <td>Tokyo</td>
-      <td>63</td>
-      <td>2011/07/25</td>
-      <td>$170,750</td>
-    </tr>
-    <tr>
-      <td>Donna Snider</td>
-      <td>Customer Support</td>
-      <td>New York</td>
-      <td>27</td>
-      <td>2011/01/25</td>
-      <td>$112,000</td>
-    </tr>
+      <tr>
+        <td><?php echo $depot //ou $UnEleve['CODE'] ?></td>
+        <td><?php echo $nom ?></td>
+        <td><?php echo $code ?></td>
+        <td><?php echo $composition ?></td>
+        <td><?php echo $effets ?></td>
+        <td><?php echo $contredication ?></td>
+        <td><?php echo $prixechantillon ?></td>
+        <td><?php echo $presentation ?></td>
+        <td><?php echo $codefamille ?></td>
+        <td><?php echo $libellefamille ?></td>
+      </tr>
+      <?php
+    }
+       ?>
   </tbody>
   <tfoot>
     <tr>
-      <th>Name
+      <th class="th-sm">MED_DEPOTLEGAL
       </th>
-      <th>Position
+      <th class="th-sm">MED_NOMCOMMERCIAL
       </th>
-      <th>Office
+      <th class="th-sm">FAM_CODE
       </th>
-      <th>Age
+      <th class="th-sm">MED_COMPOSITION
       </th>
-      <th>Start date
+      <th class="th-sm">MED_EFFETS
       </th>
-      <th>Salary
+      <th class="th-sm">MED_CONTREINDIC
+      </th>
+      <th class="th-sm">MED_PRIXECHANTILLON
+      </th>
+      <th class="th-sm">MED_PRESENTATION
+      </th>
+      <th class="th-sm">FAM_CODE
+      </th>
+      <th class="th-sm">FAM_LIBELLE
       </th>
     </tr>
   </tfoot>
 </table>
+<!-- 
+<script type="text/javascript">
+$(document).ready( function () {
+    $('#dtBasicExample').DataTable();
+} );
+</script> -->
